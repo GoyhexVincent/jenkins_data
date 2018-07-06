@@ -19,3 +19,4 @@ psql -U vgoyhex -d localhost  -p 5432 -c "CREATE TABLE edf.nuclear_reactors_data
     raccordement_au_reseau smallint,
     mise_en_service smallint);"
 psql -U vgoyhex -d localhost -p 5432 -c "\COPY edf.nuclear_reactors_dataset FROM 'nuclear_reactors_dataset.csv' WITH DELIMITER AS ',' CSV HEADER ENCODING 'WIN1252';"
+rm nuclear_reactors_dataset.csv
